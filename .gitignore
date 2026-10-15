@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Data and generated artifacts
+data/raw/
+data/processed/
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+logs/**/*.log
+results/**/checkpoint.pt
+results/**/train.log
+results/**/*.npy
+results/**/*.npz
+
+# Local configuration
+configs/local.yaml
+
+# IDE and OS
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

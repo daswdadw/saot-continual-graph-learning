@@ -1,0 +1,10 @@
+# Python 3.10+
+torch
+numpy
+scipy
+scikit-learn
+matplotlib
+seaborn
+pyyaml
+networkx
+pot

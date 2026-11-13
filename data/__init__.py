@@ -8,9 +8,10 @@ loading the module twice.
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
+    from .neighbor_sampling import LayerWiseNeighborLoader
     from .replay_buffer import ReplayBuffer
 
-__all__ = ["ReplayBuffer"]
+__all__ = ["LayerWiseNeighborLoader", "ReplayBuffer"]
 
 
 def __getattr__(name: str):
@@ -20,4 +21,8 @@ def __getattr__(name: str):
         from .replay_buffer import ReplayBuffer
 
         return ReplayBuffer
+    if name == "LayerWiseNeighborLoader":
+        from .neighbor_sampling import LayerWiseNeighborLoader
+
+        return LayerWiseNeighborLoader
     raise AttributeError(f"module {__name__!r} has no attribute {name!r}")

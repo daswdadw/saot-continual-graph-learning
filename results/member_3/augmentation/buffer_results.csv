@@ -1,0 +1,4 @@
+seed,replay_budget,buffer_size,num_tasks,sample_size,loader_batches,sampled_subgraph_nodes,elapsed_ms
+42,0,0,0,0,0,0,3.059800001210533
+42,200,200,8,32,2,321,12.813800000003539
+42,800,256,8,32,2,320,13.267000002088025

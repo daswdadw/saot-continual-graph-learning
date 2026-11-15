@@ -1,6 +1,0 @@
-{
-  "fgw_distances": [0.22, 0.31, 0.48, 0.52, 0.41],
-  "distance_min": 0.15,
-  "distance_max": 0.60,
-  "comment": "Optional input from Member 2; one distance per task transition after task 0"
-}

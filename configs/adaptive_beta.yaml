@@ -1,0 +1,14 @@
+dataset: CoraFull-CL
+scenario: class-il
+seed: 42
+hidden_dim: 256
+learning_rate: 0.001
+alpha: 1.0
+beta_fixed: 0.6
+beta_min: 0.3
+beta_max: 1.0
+beta_smoothing: 0.2
+replay_budget: 200
+edge_drop: 0.2
+feature_mask: 0.2
+num_tasks: 35

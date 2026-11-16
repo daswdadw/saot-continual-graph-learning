@@ -1,0 +1,8 @@
+dataset: CoraFull-CL
+seed: 42
+model: gcn_sequential_numpy_validation
+hidden_dim: 32
+epochs_per_task: 20
+learning_rate: 0.2
+task_split_sha256: 11b07307305c6d6128cb5149d7177c1298b3be8ea68446482d6e90a80418dc22
+scenario: class-il

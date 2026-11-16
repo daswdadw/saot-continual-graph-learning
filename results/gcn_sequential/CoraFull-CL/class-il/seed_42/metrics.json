@@ -1,0 +1,12 @@
+{
+  "class_il": {
+    "AF": -0.08952712267637253,
+    "AP": 0.018529683351516724
+  },
+  "elapsed_seconds": 6.6295178000000305,
+  "note": "Member-1 supervised GCN smoke test for validating the data pipeline; not a SAOT paper reproduction result.",
+  "task_il": {
+    "AF": 5.953495929134078e-05,
+    "AP": 0.5602076649665833
+  }
+}

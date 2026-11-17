@@ -81,3 +81,21 @@ docs(member-N): <report or slides>
 ## 当前状态
 
 仓库已完成基础初始化。六位成员可以从各自的工作包开始，不需要等待其他成员完成第一版；接口和文件交付要求以分工 Markdown 为准。
+
+## 成员 4：SAOT 核心实现
+
+成员 4 的实现严格对应论文第 4 节：FGW 图空间计划 `pi_G`、表示空间计划 `pi_Z`、计划对齐损失 `L_mat`、结构校准损失 `L_str`、冻结 teacher 的跨任务计划蒸馏 `L_skd`，以及
+
+```text
+L_total = L_mat + alpha * L_str + beta * L_skd
+```
+
+安装依赖后运行最小完整实验：
+
+```bash
+pip install -r requirements.txt
+python experiments/train_sequential.py --config configs/example.yaml --seed 42 --smoke-test
+python experiments/member_4_ablation.py --config configs/example.yaml --seed 42 --smoke-test
+```
+
+真实 CoraFull-CL 任务需要先由成员 1 生成 `task_file`。文件格式为 `torch.save({"tasks": [{"x": ..., "adjacency": ...}, ...]}, path)`，然后在配置中设置 `task_file` 并去掉 `--smoke-test`。由于 OT 计划的复杂度是节点数平方，训练前应使用论文所述 replay/neighbor sampling 将每个任务限制到固定节点预算。

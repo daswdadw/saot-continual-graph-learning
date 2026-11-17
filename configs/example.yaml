@@ -1,12 +1,27 @@
 dataset: CoraFull-CL
 scenario: class-il
 seed: 42
-hidden_dim: 256
+hidden_dim: 512
+out_dim: 128
+input_dim: 32
+device: cpu
+dropout: 0.0
 learning_rate: 0.001
+linear_probe_learning_rate: 0.01
+linear_probe_epochs: 100
 alpha: 1.0
-beta: 1.0
+beta: 0.6
+sigma: 0.5
+ot_epsilon: 0.05
+epochs: 100
 replay_budget: 200
+ot_node_budget: 256
+eval_node_budget: 2000
 edge_drop: 0.2
 feature_mask: 0.2
 num_tasks: 35
 output_root: results
+# For real data, set task_file to a torch file containing
+# {"tasks": [{"x": Tensor[N,D], "adjacency": Tensor[N,N]}, ...]}.
+# task_file: data/task_splits/corafull_tasks.pt
+# First create a real CoraFull task tensor file with data/build_task_tensor.py.

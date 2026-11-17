@@ -1,10 +1,12 @@
 # Python 3.10+
 torch
+torch-geometric
 numpy
 scipy
 scikit-learn
 matplotlib
 seaborn
 pyyaml
+pandas
 networkx
 pot
